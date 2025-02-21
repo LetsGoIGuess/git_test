@@ -1,0 +1,282 @@
+
+<--------------------------- HTML --------------------------->
+
+1. HTML tags
+- The <html> tag can have a lang to declare the langauge of the website as well as the country
+- The title attribute will display a text or tooltip when the element is hovered over
+- The <pre> tag can be used to preserve the breaks and spaces between text rather than it being all together
+- <q> tag sets small quotations to text in the tags
+- <abbr title="full abbrieviation"> tag shows the abbrieviation of a text when hovered over it
+- <address> tag defines contact info of the author of the site
+- <cite> tag can be used to define the title of a creative work
+- <!-- --> is how to make a comment in an HTML file
+- block elements take up the entire space such 
+- inline elements take up as much space is needed rather than the entire space
+
+
+2. colors
+- rgb (red, green, blue, oppacity)
+- hex #rrggbb
+- hsl(hue, saturation, lightness)
+
+
+3. Links
+- _self opens the link in the same tab
+- _blank opens the link in another tab
+- You can link to an id by linking the a tag to the id of the element | use the #<id> to go to the id
+
+
+
+4. Images
+- recommended to use width and height of images in the styles attribute
+- background-image: url(); - sets background image with a file
+- to make an image cover an entire element without stretching, use background-size: cover; and background-attachment: fixed;
+- to make an image cover an entire element while stretching, use background-size: 100% 100%;
+- set the width to 100% to keep the image scaled 
+
+
+
+5. Tables
+- the <caption> tag allows for a caption on top of the table 
+- the colspan or rowspan can be used to stretch a cell into another column or row
+- padding can be applied to the table headers (th) and table data (td) to spread the cells edges apart from eachother
+- tr:nth child(even/odd) can be used to set different colors for each distinct row
+- td:nth child(even/odd) and th:nth child(even/odd) can be used to sett different colors for each distinct column
+
+
+6. Divs
+- Divs are a block element tag
+- Setting the margin to auto will center the div (if the div hasn't taken the entire space)
+
+
+7. Class & ID
+- Classes use the .
+- ID uses the #
+- Classes can be assigned to multiple elements | Ex: <element class="class1 class2">
+- IDs can't be assigned to multiple elements
+- <ele 1> <ele 2> effects any element 2s that are within an element 1 | Ex: div p would get all paragraphs in divs
+- <ele 1> > <ele 2> effects any elements that are in element 1 / if element 2 is within another set of tags even within element 1, it will not work
+- <ele 1> + <ele 2> effects any element 2s that come right after element 1 (the next one only)
+- <ele 1> ~ <ele 2> effects any element 2s that are after element 1 (any next ones that are element 2)
+
+
+8. Head Information
+- The title must be text based only
+- <link rel="icon" type="image/x-icon" href="<image path>"> to add a favicon
+- <link rel="stylesheet" href="<css file>"> to link the HTML file to a css file
+- the <meta> tag can be used to provide info to browsers SEO
+    - can be used to define the character set being used | Example: <meta charset="UTF-8">
+    - define keywords for search engines | Example: <meta name="keywords" content="keywords">
+    - define a description for the webpage | Example: <meta name="description" content="description">
+    - define the author of the website or webpage | Example: <meta name="author" content="author name">
+    - refresh a document every certain amount of time | Example: <meta http-equiv="refresh" content="time">
+    - set viewport to make the site look good on all devices | Example: <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+9. Buttons & Forms
+- to link a button to another page, you can put it inside a tags
+- the <form> tags are used to implement a form
+- the <label for="<label id>">Label title</label> sets a label on one of the items in a form
+- the action="action" attribute on the form tag will take the user somewhere once the form is completed
+- the input tag is used for the input that will be operated by the user | <input type="input type" id="label id" name="label id/name" value="value of input">
+- method="get" shows the input in the url
+- method="post" doesn't work on browsers
+- the for attribute in a label should match the input ID so clicking the label will link to that input
+- the name will show what was inputed in those fields when the form is submitted in the url
+
+
+
+9.1 Form Input types
+- type="text" will make the input a text box to type in
+
+- type="radio" will make the input a button to click on / it comes before the label | the name of the radio inputs must be the same! | put a value attribute as it is the name attribute for radio buttons
+
+- type="checkbox" will make the input to a checkbox / it comes before the label
+
+- type="submit" will make the submit button for the form
+
+- type="reset" will make the submit button reset the form
+
+- type="number" will make an input for only a number | max="" for highest number / min="" for lowest number / step="" for moving up or down a certain amount of numbers
+
+- type="hidden" will make a hidden input, mostly useful for doing some fancy javascript
+
+- type="file" will make an input for a file
+- type="url" will make an input for a url file
+- type="phone" will make an input for a phone number
+- <textarea> can be used to make a textbox input
+
+- select menus can be made with <select> tags
+- options can be implemented within the select tag
+
+
+
+
+
+9.2 Form Attributes
+- value="text" sets the inital value for the input
+- placeholder="text" sets a placeholder inside the input for input context
+
+
+
+10. Media
+- the audio element should have <audio controls> so the user can mess with the file
+- the <source src="audio file" type="file type"> should be inserted in the audio element to embed the specific audio file
+- the autoplay automatically plays the audio by default / the muted makes the audio muted by default
+- you can add text after the source element incase the file isn't supported
+- the video element is similar to the audio element but it also has width and height in the <video> tag
+
+
+
+
+<--------------------------- CSS --------------------------->
+
+1. Basics
+- class names can't start with a number
+- a class can effect a specific element if specified | Ex: p.color will implement the class style to paragraphs linked to the class named color
+- an element can be linked to multiple classes by separating the names of the classes within the "class="
+- the "*" selects all elements in the HTML
+- /**/ to comment in a CSS file
+
+
+2. Text
+- text-align allows text to be aligned to the left, right, or on the center
+- text-align: justified; allows for lines of text to be the same width
+- text-align-last: specifies how to align the last line of text
+- always have a fallback generic font incase the first font doesn't work
+- font-style allows for text to either be normal, italics, or oblique (similar to italics)
+- font-weight changes the boldness of the text
+
+
+3. Colors
+- color:<color> style will change the color of the font
+- border: <size> <color> <type> will provide a border around an element 
+- background-color will change the background of an element
+- The opacity range is between 0.0 - 1.0, the lower, the more transparent
+- the outline is a line drawn outside the border
+- background:linear-gradient() takes a degree, colors with or without a percentage to make a gradient like color (multiple colors)
+- box-shadow: xval, yval, bluradius, spreadradius, color - allows you to put a box shadow around an element 
+- rgba(red,green,blue,opacity) is one way of applying a color with an opacity
+- hsl(hue, saturation%, lightness%) hue=color / saturation=true amount of the color / brightness-> 0 = black and 100 = white
+- hsla(hue, saturation%, lightness%, opacity)
+- the "transparent" key word can make an attribute transparent
+- the "currentcolor" key word can make an element the current color of the container it is in (use color in the parent container)
+
+4. Images
+- background-position allows the image to be positioned at a specific spot on the page
+- background-attachment: fixed keeps the image in the same spot during scrolling 
+- background-attachment: scroll keeps the image in the same spot visible during scrolling 
+- you can shorthand all the elements for a background image by putting it in background:
+- margining left and right to auto and turning the display to a block element will make the image centered
+- using body::after {position:absolute; width:0; height:0; overflow:hidden; z-index:-1; content:url(img path);} allows images to be preloaded 
+- when using multiple background images, use the position properties to put the images in their place
+
+
+5. Positioning
+- margins put space between the outside of the element
+- shorthand of margin -> margin: <top> <right> <bottom> <left> | margin <top & bottom> <right & left>
+- inheriting a margin for an element in an element will set the same margin as the parent element
+- position:static positions the element to follow the normal flow
+- position:fixed will keep the element in the same spot | use right / left / top / bottom to keep the element fixed in a specific part of the screen
+- position:absolute will make the element positioned relative to its positioned ancestor
+- z-index: allows elements to be pushed behind or in front of other elements | -1: behind 0: in front
+- if you do hide an element and do <ele 1> <hidden ele>, you can unhide the element
+
+
+6. Links  
+- <element>:link - state when the link is not active
+- <element>:visited - state when the link is already been active 
+- <element>:hover - state when the link is being hovered
+- <element>:active - state when the link is being clicked
+- <element>:hover must come after <element>:link & <element>:visited
+- <element>:active must come after <element>:hover
+
+
+7. Lists & Tables
+- list-style-type: specifies the list item marker 
+- list-style-image: url(link to image) allows the list item marker to be an image
+- list-style-position: specifies the position of the list item marker
+- border-collapse:collapse is good when double borders show up
+
+
+8. Display 
+- display:none hides the display of an element
+- display:inline can't have a width and a height
+- visibility:hidden will hide the display of an element but the space will still be there
+- max-width will allow block-level elements to fit in with smaller screens rather than staying at same width
+- overflow: visible will keep content flowing outside an element even if there's not enough space
+- overflow: hidden hides the overflown content
+- overflow: scroll allows to see the cut content by scrolling
+- overflow: auto does the same as scroll but adds a scroll if necessary
+- border-radius: can make the corners not be completely straight
+- border-image: allows you to make the border with an image
+
+
+9. Pseudo-Classes
+- <ele>:: allows you to alter certain parts of an element
+- <ele>::first-line allows you to style the first line 
+- <ele>::first-letter allows you to style the first letter
+- <ele>::before allows content to be added before the element
+- <ele>::after allows content to be added after the element
+- ::marker selects the markers of list items
+- ::selection selects what content is being selected to be styled
+
+10. Units and Functions
+- calc(equation) performs a calculation to be used as the property value
+- max(val,val) will use the largest value to be set as the property value
+- min(val,val) will use the smallest value to be set as the property value
+
+
+11. Flexbot
+- flex elements need to have a parent container with the flex property
+- flex-direction: row places the contents in a row direction
+- flex-direction: column places the contents in a column direction | column-reverse places the content in reverse order column wise 
+- flex-wrap: wrap allows content to wrap onto the next row | wrap-reverse does the same but goes to the up row 
+- flex-wrap: nowrap makes the content not wrap onto the next line 
+- justify-content: space-between adds even space between items but it moves content over
+- justify-content: space-evenly adds spaces between the contents evenly
+- justify-content: center centers all items
+- align-items: flex-start puts the items at the top of the container
+- align-items: flex-end puts the items at the bottom of the container
+- align-items: center centers the items in the container vertically
+- gap: <horizontal> <vertical> adds gap space between items
+- order: # will place one of the items in the container in that specific item order
+- flex-basis: <size> sets the min size of a flex item
+- flex-grow: # grows the flex item until no spacing is left over
+- flex-shrink: # shrinks the flex item until it can't shrink no more / useful if the container needs to only fit the content
+
+
+12.1 2D Transformations
+- transform: translate(x-axis, y-axis) moves the element to the said location
+- transform: rotate(#deg) rotates the element clockwise (use negative value for counterclockwise)
+- transform: scale(width,height) scales the image bigger or lower based on the values given
+- transform: scaleX(val) scales the width of the element
+- transform: scaleY(val) scales the height of the element
+- transform: skewX(val) skews the element on the x axis
+- transform: skewY(val) skews the element on the y axis
+
+
+12.2 3D Transformations
+- transform: rotateX(#deg) rotates the element around its x-axis
+- transform: rotateY(#deg) rotates the element around its y-axis
+- transform: rotateZ(#deg) rotates the element around its z-axis
+
+
+12.3 Transitions
+- to make a transformation, the css property and the duration need to be specified | transition: <property> <duration>
+- transition-timing-function: ease - makes transition start slow, go faster, then end slower
+- transition-timing-function: linear - same speed from start to finish
+- transition-timing-function: ease-in - slow start
+- transition-timing-function: ease-out - slow end
+- transition-timing-function: ease-in-out - slow start and slow end
+- transition-delay: <time> sets a delay to the transition
+
+
+12.4 Animations
+- @keyframes <name> can be used to apply an animation
+- use animation-name: <animation name> and animation-duration: <time> to apply the animation to an element
+- you can use percentages to determine what occurs during a moment of an animation
+- you can use "to" and "from" to change the animation from one to another
+- animation-delay: <time> sets a delay to the animation | negative values would continue from where they start if the number was positive
+- animation-iteration-count: # specifies the number of times an animation should run
